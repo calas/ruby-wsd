@@ -4,7 +4,6 @@ require 'open-uri'
 require 'yaml'
 
 class Wsd
-  VERSION = '0.0.1'
   STYLES = %w(default earth modern-blue mscgen omegapple qsd rose roundgreen napkin)
   BASE_URL = 'http://www.websequencediagrams.com'
 
