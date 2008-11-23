@@ -1,0 +1,35 @@
+#!/usr/bin/env ruby
+require 'rubygems'
+require 'wsd'
+require 'optparse'
+require 'pp'
+
+options = {}
+OptionParser.new do |opts|
+  opts.banner = "Usage: wsd [options]"
+
+  opts.on("-v", "--[no-]verbose", "Run verbosely") do |v|
+    options[:verbose] = v
+  end
+
+  opts.on("-f [FILE]", "--file [FILE]", "Input file") do |f|
+    options[:file] = f
+  end
+
+  opts.on("-o [FILE]", "--output-file [FILE]", "Output file") do |f|
+    options[:outfile] = f
+  end
+
+  opts.on("--all-styles", "Show all available styles") do |s|
+    options[:show_styles] = s
+  end
+end.parse!
+
+if options[:show_styles]
+  puts "Available styles:"
+  puts Wsd::STYLES.join(', ')
+  exit
+end
+
+d = Wsd.new(File.read(options[:file]))
+d.write(options[:outfile])

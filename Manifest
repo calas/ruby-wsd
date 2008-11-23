@@ -1,5 +1,7 @@
+bin/wsd
 CHANGELOG
 README.rdoc
+Manifest
 Rakefile
 lib/wsd.rb
-Manifest
+ruby-wsd.gemspec
