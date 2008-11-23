@@ -1,6 +1,6 @@
 = ruby-wsd
 
-* http://github.com/calas/ruby-wsd/
+* http://github.com/calas/ruby-wsd/tree/master/README.rdoc
 
 == DESCRIPTION:
 
@@ -8,15 +8,38 @@ Ruby bindings for the http://www.websequencediagrams.com API
 
 == FEATURES/PROBLEMS:
 
-* FIX (list of features or problems)
+Features:
+
+* Diagrams can be written to a file with the +write+ instance method.
+* Diagrams can be embbeded in HTML using the +to_html+ instance method.
+
+Problems:
+
+* Gem is not tested
+* Source is undocumented
 
 == SYNOPSIS:
 
-  FIX (code sample of usage)
+  require 'rubygems'
+  require 'wsd'
+
+  diagram = <<-DIAGRAM
+  note over Alice,Bob: Example diagram
+  Alice->Bob: look this beatiful diagrams
+  note right of Bob
+    Bob realizes he is tired of clicking
+    in MS Visio for creating diagrams
+  end note
+  Bob-->Alice: Thanks
+  DIAGRAM
+
+  d = Wsd.new(diagram, 'napkin')
+  d.write("diagram.png")
+  d.to_html
 
 == REQUIREMENTS:
 
-* FIX (list of requirements)
+* None.
 
 == INSTALL:
 
@@ -26,7 +49,7 @@ You can install +ruby-wsd+ directly from github:
 
 or you can compile sources
 
-  git clone <repo>
+  git clone git://github.com/calas/ruby-wsd.git
   cd ruby-wsd
   rake install
 
