@@ -6,6 +6,7 @@ require 'echoe'
 # Run 'rake -T' to see list of generated tasks (from gem root directory)
 Echoe.new('ruby-wsd') do |p|
   p.description = 'Ruby bindings for http://www.websequencediagrams.com'
+  p.project = 'ruby-wsd'
   p.url = 'http://github.com/calas/ruby-wsd/tree/master'
   p.author = 'Jorge Calás Lozano'
   p.email = 'calas@qvitta.net'
