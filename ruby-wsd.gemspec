@@ -25,7 +25,8 @@ Gem::Specification.new do |s|
      "Rakefile",
      "VERSION",
      "bin/wsd",
-     "lib/wsd.rb"
+     "lib/wsd.rb",
+     "ruby-wsd.gemspec"
   ]
   s.homepage = %q{http://github.com/calas/ruby-wsd}
   s.rdoc_options = ["--charset=UTF-8"]
