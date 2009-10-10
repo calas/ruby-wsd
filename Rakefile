@@ -1,17 +1,17 @@
-require 'rubygems'
+# -*- coding: utf-8 -*-
 require 'rake'
-require 'echoe'
 
-# Generate all the Rake tasks
-# Run 'rake -T' to see list of generated tasks (from gem root directory)
-Echoe.new('ruby-wsd') do |p|
-  p.description = 'Ruby bindings for http://www.websequencediagrams.com'
-  p.project = 'ruby-wsd'
-  p.url = 'http://github.com/calas/ruby-wsd/tree/master'
-  p.author = 'Jorge Calás Lozano'
-  p.email = 'calas@qvitta.net'
-  p.ignore_pattern = ['tmp/*']
-  p.development_dependencies = []
+begin
+  require 'jeweler'
+  Jeweler::Tasks.new do |gemspec|
+    gemspec.name = 'ruby-wsd'
+    gemspec.summary = "Web Sequence Digrams from Ruby"
+    gemspec.description = 'Ruby bindings for http://www.websequencediagrams.com'
+    gemspec.email = 'calas@qvitta.net'
+    gemspec.homepage = 'http://github.com/calas/ruby-wsd'
+    gemspec.authors = ['Jorge Calás Lozano']
+  end
+  Jeweler::GemcutterTasks.new
+rescue LoadError
+  puts "Jeweler not available. Install it with: sudo gem install technicalpickles-jeweler -s http://gems.github.com"
 end
-
-Dir['tasks/**/*.rake'].each { |t| load t }
