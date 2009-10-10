@@ -45,7 +45,7 @@ Problems:
 
 You can install +ruby-wsd+ directly from gemcutter:
 
-  sudo gem install calas-ruby-wsd -s http://gemcutter.org
+  sudo gem install ruby-wsd -s http://gemcutter.org
 
 or you can compile sources
 
