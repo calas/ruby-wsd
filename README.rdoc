@@ -25,7 +25,7 @@ Problems:
 
   diagram = <<-DIAGRAM
   note over Alice,Bob: Example diagram
-  Alice->Bob: look this beatiful diagrams
+  Alice->Bob: look this beautiful diagrams
   note right of Bob
     Bob realizes he is tired of clicking
     in MS Visio for creating diagrams
